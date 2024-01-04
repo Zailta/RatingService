@@ -31,6 +31,18 @@ public class RatingServiceLayer implements RatingServiceInterface{
 		return allratings;
 	}
 
+	@Override
+	public List<RatingEntity> getByuserIdContaining(String userId) {
+		List<RatingEntity> findByuserIdContaining = ratingRepository.findByuserId(userId);
+		return findByuserIdContaining;
+	}
+
+	@Override
+	public List<RatingEntity> getByhotelIdContaining(String hotelId) {
+		List<RatingEntity> findByhotelId = ratingRepository.findByhotelId(hotelId);
+		return findByhotelId;
+	}
+
 	
 
 }
